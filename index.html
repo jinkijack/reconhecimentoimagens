@@ -14,26 +14,43 @@
         <header class="jumbotron" style="background-color:#222222; color:white;">
             <h1>IFSULDEMINAS - Teachable Machine Image Model</h1>
             <p>Campus Machado </p>
-            <p> Antonio Augusto & Thiago </p>
+            <p> Antonio Augusto & Tiago </p>
        </header>
-    
-       <div class="load-image">
-        <img id="preview" src="image1.png" width="250" alt="" />
+    <div class="card">
+
+      <div class="card-body">
+
+        <div class="load-image">
+          <img id="preview" src="image1.png" width="250" alt="" />
+        </div>
+        <div class="send-image">
+          <label for="image_ts">
+            <p id="location-src">Clique para adicionar sua imagem</p>
+            <input
+              type="file"
+              name="image"
+              id="image_ts"
+              onchange="previewImage()"
+            />
+          </label>
+          <button class="btn" onclick="init()">Enviar</button>
+
+          
+
       </div>
-      <div class="send-image">
-        <label for="image_ts">
-          <p id="location-src">Clique para adicionar sua imagem</p>
-          <input
-            type="file"
-            name="image"
-            id="image_ts"
-            onchange="previewImage()"
-          />
-        </label>
-        <button class="btn" onclick="init()">Enviar</button>
-    </div>
-    <div class="display-4"  id="label-container"></div>
-     
+
+      <div class="gooey" id ="loading">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="display-4 text-white"  id="label-container"></div>
+      </div>
+      
+  </div>
      <script src="script.js"></script>   
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>

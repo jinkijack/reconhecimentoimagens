@@ -42,6 +42,8 @@ async function stopWebcam() {
 
     // Load the image model and setup the webcam
     async function init() {
+      document.getElementById("label-container").style.visibility = "hidden";
+      document.getElementById("loading").style.visibility = "visible";
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
         model = await tmImage.load(modelURL, metadataURL);
@@ -66,5 +68,7 @@ async function stopWebcam() {
           });
 
           document.getElementById("label-container").innerHTML = max.className;
+          document.getElementById("loading").style.visibility = "hidden";
+          document.getElementById("label-container").style.visibility = "visible";
           console.log(max.className);
     }

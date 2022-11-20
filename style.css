@@ -2,8 +2,21 @@
 
 
 main.main {
-  background-color: #020024;
+  background-color: #000;
   padding: 20px 0 20px 0;
+}
+.div{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card{
+  border: none;
+  background-image: url("./images/bg.png");
+  /* background-color: #000; */
+  border-radius: 12px;
+}
+.card-body{
+  height: 500px;
 }
 
 main.main h1 {
@@ -76,6 +89,7 @@ div.send-image {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 4rem;
 }
 
 div.send-image button.btn {
@@ -85,10 +99,13 @@ div.send-image button.btn {
   border-radius: 10%;
   color: white;
   cursor: pointer;
+  max-height: 3.5rem;
+
 }
 
 div.send-image label {
   max-width: 760px;
+  max-height: 3.5rem;
   padding: 0.7rem;
   border: 1px solid #fff;
   border-radius: 0.6rem;
@@ -100,14 +117,18 @@ div.send-image label {
   color: #1a1a1a;
   -webkit-transition: all 1s;
   transition: all 1s;
+
 }
 
 div.send-image label input[type="file"] {
   display: none;
+  max-height: 4rem;
 }
 
 div.send-image label:hover {
   background-color: #8ba4ee;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 div.options {
@@ -178,7 +199,7 @@ div.load-image {
 }
 
 div.load-image img {
-  border: 10px solid white;
+  border: 10px solid #000;
   border-radius: 10px;
   max-height: 200px;
   -o-object-fit: cover;
@@ -193,7 +214,7 @@ div.load-image img {
     width: 100%;
   }
   div.send-image {
-    padding: 0 20px;
+    padding: 10px;
   }
 }
 
@@ -212,4 +233,83 @@ footer{
   left: 0;
 }
 
+.gooey {
+  visibility: hidden;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 142px;
+  height: 40px;
+  margin: -20px 0 0 -71px;
+  background: #020024;
+  filter: contrast(20);
+}
+.gooey .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  filter: blur(4px);
+  background: #f90a0a;
+  border-radius: 50%;
+  transform: translateX(0);
+  animation: dot 2.8s infinite;
+}
+.gooey .dots {
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  animation: dots 2.8s infinite;
+}
+.gooey .dots span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  filter: blur(4px);
+  background: #f90a0a;
+  border-radius: 50%;
+}
+@-moz-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@-webkit-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@-o-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@-moz-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+@-webkit-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+@-o-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+@keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
 /*# sourceMappingURL=styles.css.map */
