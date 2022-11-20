@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+
+main.main {
+  background-color: #020024;
+  padding: 20px 0 20px 0;
+}
+
+main.main h1 {
+  /*color: #fff;*/
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.details {
+  background: #22c1c3;
+  background: -webkit-gradient(linear, left bottom, left top, from(#22c1c3), to(rgba(45, 253, 146, 0.510242)));
+  background: linear-gradient(0deg, #22c1c3 0%, rgba(45, 253, 146, 0.510242) 100%);
+  padding: 15px 7px 15px 7px;
+  border-radius: 5px;
+}
+
+.details details {
+  max-width: 920px;
+  color: #111;
+  margin: 0 5px;
+}
+
+.details details p {
+  padding: 20px 0 20px 0;
+}
+
+div.center-align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 90vh;
+  position: relative;
+}
+
+div.center-align div.limit-size {
+  width: 900px;
+  position: relative;
+}
+
+div.center-align div.limit-size div.content-details {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  cursor: pointer;
+}
+
+div.send-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.send-image button.btn {
+  border: none;
+  background-color: #3857c9;
+  padding: 1rem;
+  border-radius: 10%;
+  color: white;
+  cursor: pointer;
+}
+
+div.send-image label {
+  max-width: 760px;
+  padding: 0.7rem;
+  border: 1px solid #fff;
+  border-radius: 0.6rem;
+  width: 100%;
+  background-color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  color: #1a1a1a;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+div.send-image label input[type="file"] {
+  display: none;
+}
+
+div.send-image label:hover {
+  background-color: #8ba4ee;
+}
+
+div.options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.options ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  padding-top: 5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+div.options ul li:nth-child(2n) {
+  background-color: #008d4b;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+div.options ul li:nth-child(2n + 1) {
+  background-color: #6270be;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+div.options ul li.select {
+  border: 4px solid #fff;
+  padding: 15px 40px;
+}
+
+div.load-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+div.load-image img {
+  border: 10px solid white;
+  border-radius: 10px;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (max-width: 700px) {
+  * ul {
+    gap: 15px;
+  }
+  * li {
+    width: 100%;
+  }
+  div.send-image {
+    padding: 0 20px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
