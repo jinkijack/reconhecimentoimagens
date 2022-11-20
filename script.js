@@ -14,14 +14,31 @@ function previewImage() {
       preview.src = "";
     }
   }
+  function useWebcam() {
+    camera_on = !camera_on;
 
+    if (camera_on) {
+        init();
+        document.getElementById("webcam").innerHTML = "Close Webcam";
+    }
+    else {
+        stopWebcam();
+        document.getElementById("webcam").innerHTML = "Start Webcam";
+    }
+}
+
+async function stopWebcam() {
+    await webcam.stop();
+    document.getElementById("webcam-container").removeChild(webcam.canvas);
+    labelContainer.removeChild(newlabel);
+}
   // More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
     const URL = "https://teachablemachine.withgoogle.com/models/BKhZTiYFL/";
 
-    let model, webcam, labelContainer, maxPredictions;
+    let model, webcam, labelContainer, maxPredictions,canvas,camera_on = false,newlabel;
 
     // Load the image model and setup the webcam
     async function init() {
