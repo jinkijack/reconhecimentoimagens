@@ -197,4 +197,19 @@ div.load-image img {
   }
 }
 
+body{
+  background-image: url(./images/bg.png);
+}
+
+footer{
+  text-align: center;
+  background-color: #222222;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  left: 0;
+}
+
 /*# sourceMappingURL=styles.css.map */
